@@ -1,0 +1,10 @@
+streamlit==1.37.1
+pandas==2.3.2
+numpy==1.26.4          # stabiliseert pandas build op Render (glibc compat)
+pulp==2.7.0
+highspy==1.7.2.post0   # HiGHS solver (pip-installable, geen OS binaries nodig)
+
+reportlab==4.2.2
+pypdf==4.3.1
+openpyxl==3.1.5
+Babel==2.15.0

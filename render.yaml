@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: the-studio-suite
+    env: python
+    region: frankfurt    # dicht bij NL
+    plan: free           # begin gratis; upgrade indien nodig
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run Home.py --server.port $PORT --server.address 0.0.0.0
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      # Voeg hier evt. je eigen env vars/secrets toe
+      # - key: API_TOKEN
+      #   sync: false
+    autoDeploy: true

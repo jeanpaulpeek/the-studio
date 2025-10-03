@@ -1,0 +1,201 @@
+﻿project_id;project_type;scope;quality;region;year;gross_m2;net_m2;total_cost_excl_vat;mep_label;mep_factor;pm_pct;complexity;notes;include_mep;include_pm_logistics
+OFF-001;office;both;basiskwaliteit;NL-overig;2022;1749,8;;1201159,0;Normaal (+15%);1,15;11,5;maatwerk;;True;True
+RES-002;residential;both;basiskwaliteit;NL-overig;2025;769,3;;589118,0;Normaal (+15%);1,15;14,6;standard;;True;True
+RES-003;residential;both;middensegment;NL-Randstad;2022;;988,5;948982,0;Normaal (+15%);1,15;14,7;maatwerk;;True;True
+RET-004;retail;both;middensegment;EU-noord;2023;567,9;;616087,0;Zwaar (+30%);1,3;11,6;standard;;True;True
+RES-005;residential;both;basiskwaliteit;EU-noord;2025;305,5;;177965,0;Geen installatiekosten (0%);1,0;10,7;standard;;False;True
+OFF-006;office;afbouw;high-end;EU-zuid;2023;;837,0;459611,0;Zwaar (+30%);1,3;8,3;standard;;True;True
+RET-007;retail;FF&E;middensegment;NL-Randstad;2025;;238,1;169741,0;Normaal (+15%);1,15;7,3;standard;;True;True
+RET-008;retail;afbouw;middensegment;NL-overig;2023;;578,5;381759,0;Zwaar (+30%);1,3;9,3;maatwerk;;True;True
+RES-009;residential;both;basiskwaliteit;EU-noord;2022;930,0;688,9;477316,0;Normaal (+15%);1,15;8,4;maatwerk;;True;True
+RET-010;retail;both;middensegment;EU-noord;2025;;387,4;396784,0;Normaal (+15%);1,15;11,1;standard;;True;True
+HOS-011;hospitality;both;basiskwaliteit;NL-Randstad;2021;3418,3;;2649604,0;Licht (+5%);1,05;8,2;standard;;True;True
+RES-012;residential;both;high-end;EU-noord;2025;1375,6;;1309116,0;Geen installatiekosten (0%);1,0;6,8;maatwerk;;False;True
+RET-013;retail;FF&E;basiskwaliteit;EU-noord;2024;231,4;;93324,0;Geen installatiekosten (0%);1,0;10,6;standard;;False;True
+HOS-014;hospitality;both;basiskwaliteit;EU-noord;2025;1752,2;;1619013,0;Licht (+5%);1,05;10,6;standard;;True;True
+OFF-015;office;FF&E;middensegment;NL-Randstad;2023;;1194,8;515515,0;Zwaar (+30%);1,3;9,7;maatwerk;;True;True
+OFF-016;office;FF&E;high-end;NL-overig;2022;;1103,2;868889,0;Ingrijpend (+50%);1,5;7,8;maatwerk;;True;True
+RES-017;residential;afbouw;high-end;NL-overig;2023;;245,8;145890,0;Normaal (+15%);1,15;11,0;standard;;True;True
+RES-018;residential;both;basiskwaliteit;EU-noord;2021;;446,7;270815,0;Licht (+5%);1,05;8,8;standard;;True;True
+OFF-019;office;both;high-end;EU-noord;2021;2986,9;;2110203,0;Licht (+5%);1,05;13,1;standard;;True;True
+RES-020;residential;both;middensegment;EU-zuid;2022;;777,7;654272,0;Normaal (+15%);1,15;9,1;standard;;True;True
+OFF-021;office;FF&E;high-end;NL-Randstad;2021;1708,8;;781532,0;Normaal (+15%);1,15;8,6;standard;;True;True
+HOS-022;hospitality;both;basiskwaliteit;NL-overig;2023;;1356,9;1729466,0;Ingrijpend (+50%);1,5;6,4;standard;;True;True
+OFF-023;office;both;high-end;NL-Randstad;2021;;2293,9;2707141,0;Zwaar (+30%);1,3;9,8;monument;;True;True
+HOS-024;hospitality;afbouw;high-end;NL-overig;2024;1397,4;1035,1;867340,0;Normaal (+15%);1,15;8,1;standard;;True;True
+RET-025;retail;both;high-end;EU-zuid;2022;;1420,5;1151265,0;Licht (+5%);1,05;9,9;standard;;True;True
+OFF-026;office;FF&E;basiskwaliteit;EU-zuid;2025;;1450,7;655672,0;Normaal (+15%);1,15;12,5;monument;;True;True
+HOS-027;hospitality;both;basiskwaliteit;NL-overig;2024;;252,9;305034,0;Ingrijpend (+50%);1,5;10,3;standard;;True;True
+OFF-028;office;both;middensegment;EU-noord;2023;;2908,0;2345175,0;Zwaar (+30%);1,3;11,1;standard;;True;True
+RET-029;retail;both;high-end;NL-Randstad;2021;555,0;411,1;720550,0;Zwaar ingrijpend (+70%);1,7;7,6;standard;;True;True
+HOS-030;hospitality;both;basiskwaliteit;EU-noord;2021;;606,4;576611,0;Normaal (+15%);1,15;11,0;maatwerk;;True;True
+RET-031;retail;FF&E;high-end;NL-Randstad;2025;1341,1;993,4;768744,0;Normaal (+15%);1,15;10,3;standard;;True;True
+OFF-032;office;afbouw;middensegment;NL-overig;2023;;1141,6;358508,0;Licht (+5%);1,05;9,0;standard;;True;True
+RET-033;retail;both;basiskwaliteit;NL-Randstad;2021;;649,8;568988,0;Zwaar (+30%);1,3;10,9;standard;;True;True
+HOS-034;hospitality;FF&E;basiskwaliteit;EU-zuid;2025;;356,5;213102,0;Normaal (+15%);1,15;9,3;maatwerk;;True;True
+HOS-035;hospitality;both;high-end;NL-overig;2024;695,2;;938681,0;Normaal (+15%);1,15;9,0;standard;;True;True
+OFF-036;office;afbouw;basiskwaliteit;NL-overig;2021;4814,8;;1444381,0;Normaal (+15%);1,15;11,2;standard;;True;True
+HOS-037;hospitality;afbouw;basiskwaliteit;NL-overig;2022;1075,9;;423732,0;Geen installatiekosten (0%);1,0;10,8;maatwerk;;False;True
+RES-038;residential;afbouw;high-end;NL-overig;2023;;670,0;597220,0;Zwaar (+30%);1,3;9,9;standard;;True;True
+HOS-039;hospitality;both;high-end;EU-noord;2023;;998,6;1963362,0;Ingrijpend (+50%);1,5;9,4;maatwerk;;True;True
+RES-040;residential;both;high-end;EU-noord;2023;1640,5;1215,2;1340403,0;Normaal (+15%);1,15;6,5;standard;;True;True
+OFF-041;office;both;high-end;NL-overig;2025;;881,4;1036292,0;Licht (+5%);1,05;12,4;monument;;True;True
+RET-042;retail;both;high-end;NL-Randstad;2024;;790,0;1191268,0;Licht (+5%);1,05;5,8;maatwerk;;True;True
+HOS-043;hospitality;both;basiskwaliteit;EU-noord;2025;800,9;;881379,0;Zwaar (+30%);1,3;7,0;standard;;True;True
+RET-044;retail;FF&E;basiskwaliteit;EU-noord;2025;295,8;219,1;115068,0;Normaal (+15%);1,15;8,5;standard;;True;True
+HOS-045;hospitality;FF&E;basiskwaliteit;NL-Randstad;2023;1494,7;;795807,0;Normaal (+15%);1,15;6,8;standard;;True;True
+RES-046;residential;both;middensegment;EU-zuid;2022;568,7;;499585,0;Normaal (+15%);1,15;14,6;maatwerk;;True;True
+OFF-047;office;afbouw;middensegment;EU-noord;2022;;750,6;306244,0;Licht (+5%);1,05;12,4;maatwerk;;True;True
+OFF-048;office;both;high-end;NL-overig;2024;839,3;;629869,0;Licht (+5%);1,05;13,9;standard;;True;True
+RES-049;residential;both;high-end;EU-zuid;2021;;996,4;1054666,0;Ingrijpend (+50%);1,5;10,8;standard;;True;True
+RES-050;residential;FF&E;high-end;EU-noord;2024;1166,0;;863584,0;Zwaar (+30%);1,3;6,0;standard;;True;True
+RES-051;residential;afbouw;middensegment;EU-zuid;2024;1058,7;;425984,0;Licht (+5%);1,05;10,8;standard;;True;True
+RES-052;residential;FF&E;basiskwaliteit;NL-Randstad;2023;1028,0;;449058,0;Normaal (+15%);1,15;10,7;standard;;True;True
+HOS-053;hospitality;both;middensegment;NL-overig;2021;1494,9;;1534812,0;Normaal (+15%);1,15;15,6;standard;;True;True
+RES-054;residential;afbouw;middensegment;NL-Randstad;2025;;379,2;187242,0;Geen installatiekosten (0%);1,0;12,0;standard;;False;True
+RES-055;residential;both;middensegment;NL-overig;2024;;412,7;393951,0;Normaal (+15%);1,15;13,5;standard;;True;True
+RES-056;residential;FF&E;high-end;NL-overig;2025;1375,2;;1380372,0;Ingrijpend (+50%);1,5;11,2;standard;;True;True
+OFF-057;office;FF&E;basiskwaliteit;EU-zuid;2022;;952,8;302462,0;Normaal (+15%);1,15;9,3;standard;;True;True
+RES-058;residential;both;high-end;EU-zuid;2023;838,7;;1088418,0;Normaal (+15%);1,15;7,6;maatwerk;;True;True
+HOS-059;hospitality;FF&E;middensegment;NL-Randstad;2021;;1368,9;922336,0;Licht (+5%);1,05;10,8;monument;;True;True
+HOS-060;hospitality;both;basiskwaliteit;NL-overig;2024;;711,0;1050931,0;Zwaar (+30%);1,3;14,4;maatwerk;;True;True
+OFF-061;office;FF&E;basiskwaliteit;EU-noord;2021;1221,4;;487726,0;Ingrijpend (+50%);1,5;11,9;standard;;True;True
+RES-062;residential;both;middensegment;NL-Randstad;2025;;573,2;643933,0;Normaal (+15%);1,15;11,4;maatwerk;;True;True
+OFF-063;office;FF&E;middensegment;NL-Randstad;2023;;1339,2;586973,0;Normaal (+15%);1,15;11,4;standard;;True;True
+OFF-064;office;afbouw;high-end;NL-Randstad;2024;1499,8;;1010549,0;Normaal (+15%);1,15;5,5;monument;;True;True
+RES-065;residential;both;middensegment;EU-noord;2025;441,0;;449268,0;Normaal (+15%);1,15;10,6;maatwerk;;True;True
+RET-066;retail;both;basiskwaliteit;NL-Randstad;2023;441,3;;397732,0;Licht (+5%);1,05;11,2;maatwerk;;True;True
+RES-067;residential;both;middensegment;EU-noord;2022;;345,7;295052,0;Normaal (+15%);1,15;10,2;standard;;True;True
+RET-068;retail;FF&E;middensegment;NL-overig;2021;1436,4;;792069,0;Normaal (+15%);1,15;11,7;standard;;True;True
+RES-069;residential;FF&E;middensegment;NL-Randstad;2021;;387,0;184014,0;Normaal (+15%);1,15;5,9;standard;;True;True
+RET-070;retail;both;middensegment;EU-zuid;2025;;756,7;1118879,0;Zwaar (+30%);1,3;11,5;standard;;True;True
+OFF-071;office;FF&E;basiskwaliteit;NL-overig;2022;3308,2;;1269822,0;Normaal (+15%);1,15;11,7;standard;;True;True
+RET-072;retail;afbouw;high-end;EU-noord;2022;620,7;;436240,0;Normaal (+15%);1,15;12,0;standard;;True;True
+OFF-073;office;afbouw;middensegment;NL-overig;2024;;1233,8;408834,0;Geen installatiekosten (0%);1,0;7,7;standard;;False;True
+RET-074;retail;both;basiskwaliteit;EU-zuid;2021;;2227,8;1451071,0;Normaal (+15%);1,15;10,2;maatwerk;;True;True
+OFF-075;office;both;high-end;EU-noord;2021;837,2;;725647,0;Licht (+5%);1,05;12,1;monument;;True;True
+HOS-076;hospitality;FF&E;middensegment;EU-zuid;2023;;866,1;835144,0;Zwaar ingrijpend (+70%);1,7;13,3;maatwerk;;True;True
+OFF-077;office;afbouw;basiskwaliteit;NL-overig;2023;;1950,9;604726,0;Licht (+5%);1,05;7,9;maatwerk;;True;True
+OFF-078;office;both;middensegment;EU-zuid;2023;;1420,9;947990,0;Normaal (+15%);1,15;10,6;standard;;True;True
+OFF-079;office;FF&E;high-end;NL-overig;2024;;1906,9;852496,0;Licht (+5%);1,05;16,4;standard;;True;True
+HOS-080;hospitality;both;basiskwaliteit;EU-noord;2025;;560,2;657125,0;Normaal (+15%);1,15;10,6;maatwerk;;True;True
+RET-081;retail;FF&E;high-end;EU-zuid;2024;;518,6;330917,0;Geen installatiekosten (0%);1,0;7,6;standard;;False;True
+RET-082;retail;both;basiskwaliteit;NL-Randstad;2023;;270,4;267036,0;Zwaar (+30%);1,3;12,6;standard;;True;True
+RES-083;residential;afbouw;basiskwaliteit;EU-zuid;2024;;452,5;240606,0;Normaal (+15%);1,15;8,6;monument;;True;True
+OFF-084;office;afbouw;basiskwaliteit;EU-zuid;2023;998,2;;331455,0;Normaal (+15%);1,15;11,2;maatwerk;;True;True
+RET-085;retail;both;basiskwaliteit;EU-zuid;2025;1393,5;;1038843,0;Geen installatiekosten (0%);1,0;16,4;maatwerk;;False;True
+OFF-086;office;both;middensegment;EU-zuid;2024;3532,7;;2380581,0;Licht (+5%);1,05;8,5;maatwerk;;True;True
+RES-087;residential;afbouw;middensegment;NL-Randstad;2025;;992,4;697512,0;Zwaar (+30%);1,3;11,3;maatwerk;;True;True
+OFF-088;office;both;high-end;NL-Randstad;2024;;274,7;300924,0;Normaal (+15%);1,15;9,8;monument;;True;True
+RET-089;retail;both;basiskwaliteit;EU-zuid;2024;;262,8;241037,0;Normaal (+15%);1,15;9,2;standard;;True;True
+HOS-090;hospitality;afbouw;basiskwaliteit;EU-zuid;2023;863,9;;494136,0;Normaal (+15%);1,15;5,7;monument;;True;True
+RET-091;retail;afbouw;middensegment;EU-zuid;2022;;234,7;131838,0;Normaal (+15%);1,15;14,3;standard;;True;True
+RES-092;residential;both;basiskwaliteit;NL-overig;2022;510,0;;379201,0;Licht (+5%);1,05;10,0;standard;;True;True
+RES-093;residential;both;middensegment;NL-overig;2024;629,0;465,9;443309,0;Licht (+5%);1,05;10,6;monument;;True;True
+OFF-094;office;afbouw;middensegment;EU-zuid;2021;1984,5;;766650,0;Normaal (+15%);1,15;8,8;maatwerk;;True;True
+RES-095;residential;FF&E;basiskwaliteit;EU-zuid;2021;442,9;;245455,0;Zwaar (+30%);1,3;14,8;maatwerk;;True;True
+RET-096;retail;FF&E;high-end;EU-zuid;2025;684,7;;436463,0;Geen installatiekosten (0%);1,0;4,1;standard;;False;True
+HOS-097;hospitality;FF&E;middensegment;NL-Randstad;2021;774,3;573,5;332889,0;Zwaar (+30%);1,3;10,8;standard;;True;True
+RET-098;retail;both;middensegment;NL-overig;2025;;390,1;467861,0;Zwaar (+30%);1,3;8,5;standard;;True;True
+RES-099;residential;FF&E;basiskwaliteit;NL-overig;2022;;442,8;206251,0;Licht (+5%);1,05;11,1;standard;;True;True
+RET-100;retail;FF&E;basiskwaliteit;EU-zuid;2023;1221,4;904,8;547334,0;Normaal (+15%);1,15;10,9;monument;;True;True
+RES-101;residential;afbouw;basiskwaliteit;EU-zuid;2024;;476,3;194002,0;Normaal (+15%);1,15;7,5;standard;;True;True
+RET-102;retail;both;high-end;EU-zuid;2023;740,7;;1156429,0;Ingrijpend (+50%);1,5;11,8;standard;;True;True
+RES-103;residential;afbouw;high-end;NL-overig;2025;;468,1;307579,0;Licht (+5%);1,05;13,8;maatwerk;;True;True
+HOS-104;hospitality;FF&E;high-end;NL-Randstad;2023;;731,3;658796,0;Geen installatiekosten (0%);1,0;9,4;maatwerk;;False;True
+RET-105;retail;both;middensegment;NL-overig;2022;;905,1;1346795,0;Ingrijpend (+50%);1,5;12,5;maatwerk;;True;True
+RET-106;retail;afbouw;basiskwaliteit;EU-zuid;2023;;836,4;391863,0;Normaal (+15%);1,15;10,1;maatwerk;;True;True
+HOS-107;hospitality;FF&E;basiskwaliteit;EU-zuid;2025;;770,7;501409,0;Zwaar (+30%);1,3;11,0;standard;;True;True
+RES-108;residential;both;middensegment;EU-noord;2025;;413,3;445520,0;Normaal (+15%);1,15;11,8;standard;;True;True
+RES-109;residential;both;high-end;EU-noord;2025;448,7;;470951,0;Geen installatiekosten (0%);1,0;7,0;standard;;False;True
+RET-110;retail;FF&E;basiskwaliteit;NL-Randstad;2021;;807,9;399525,0;Normaal (+15%);1,15;12,4;standard;;True;True
+HOS-111;hospitality;both;middensegment;EU-zuid;2025;;486,4;545390,0;Licht (+5%);1,05;10,0;maatwerk;;True;True
+RES-112;residential;FF&E;high-end;EU-noord;2021;;1108,1;609786,0;Licht (+5%);1,05;8,0;maatwerk;;True;True
+RET-113;retail;both;middensegment;EU-noord;2021;;458,1;363359,0;Licht (+5%);1,05;7,5;standard;;True;True
+RES-114;residential;both;basiskwaliteit;NL-Randstad;2021;;412,4;279379,0;Licht (+5%);1,05;8,3;maatwerk;;True;True
+OFF-115;office;afbouw;middensegment;NL-overig;2022;1455,2;1077,9;306834,0;Licht (+5%);1,05;10,7;standard;;True;True
+HOS-116;hospitality;both;middensegment;NL-Randstad;2021;471,9;;428372,0;Normaal (+15%);1,15;10,7;standard;;True;True
+OFF-117;office;both;basiskwaliteit;EU-zuid;2025;;1248,3;685565,0;Geen installatiekosten (0%);1,0;7,8;standard;;False;True
+OFF-118;office;both;basiskwaliteit;NL-Randstad;2025;;2132,6;1521764,0;Normaal (+15%);1,15;14,4;standard;;True;True
+RES-119;residential;both;basiskwaliteit;EU-zuid;2021;;373,4;249134,0;Normaal (+15%);1,15;9,9;maatwerk;;True;True
+RET-120;retail;both;middensegment;EU-noord;2024;910,2;;853126,0;Normaal (+15%);1,15;9,1;standard;;True;True
+HOS-121;hospitality;both;high-end;EU-zuid;2023;2821,9;;4097698,0;Normaal (+15%);1,15;11,6;maatwerk;;True;True
+RET-122;retail;FF&E;middensegment;NL-overig;2024;;840,5;547558,0;Zwaar (+30%);1,3;11,2;standard;;True;True
+RET-123;retail;afbouw;middensegment;EU-noord;2021;755,7;559,8;350492,0;Ingrijpend (+50%);1,5;10,7;standard;;True;True
+OFF-124;office;afbouw;middensegment;EU-noord;2021;1898,1;;626293,0;Licht (+5%);1,05;7,7;standard;;True;True
+OFF-125;office;both;middensegment;NL-Randstad;2023;3029,0;;3229936,0;Zwaar (+30%);1,3;14,4;standard;;True;True
+OFF-126;office;FF&E;middensegment;EU-noord;2021;;2148,3;934228,0;Zwaar (+30%);1,3;7,7;standard;;True;True
+OFF-127;office;both;basiskwaliteit;EU-zuid;2021;;927,1;477736,0;Normaal (+15%);1,15;16,6;standard;;True;True
+HOS-128;hospitality;both;middensegment;NL-overig;2023;314,6;233,0;235394,0;Normaal (+15%);1,15;8,2;standard;;True;True
+OFF-129;office;both;middensegment;NL-Randstad;2021;2021,4;;1377823,0;Normaal (+15%);1,15;7,7;standard;;True;True
+RET-130;retail;both;middensegment;EU-noord;2024;1326,5;;1345650,0;Normaal (+15%);1,15;15,6;standard;;True;True
+RET-131;retail;both;middensegment;NL-Randstad;2021;1007,5;;1035883,0;Ingrijpend (+50%);1,5;7,3;standard;;True;True
+RET-132;retail;both;basiskwaliteit;EU-zuid;2022;;1127,4;870846,0;Normaal (+15%);1,15;15,5;standard;;True;True
+RET-133;retail;both;high-end;NL-Randstad;2024;1689,9;;2766427,0;Ingrijpend (+50%);1,5;4,9;standard;;True;True
+RES-134;residential;FF&E;middensegment;NL-Randstad;2024;364,0;;199829,0;Normaal (+15%);1,15;13,7;standard;;True;True
+RET-135;retail;both;high-end;NL-overig;2024;;571,4;675892,0;Normaal (+15%);1,15;10,0;standard;;True;True
+RET-136;retail;both;middensegment;NL-Randstad;2025;;292,8;321034,0;Normaal (+15%);1,15;11,9;standard;;True;True
+RET-137;retail;FF&E;high-end;NL-overig;2022;;756,4;504480,0;Licht (+5%);1,05;10,4;standard;;True;True
+OFF-138;office;both;middensegment;EU-zuid;2024;;645,0;617723,0;Zwaar (+30%);1,3;6,6;maatwerk;;True;True
+RET-139;retail;afbouw;middensegment;NL-overig;2024;;354,6;217163,0;Normaal (+15%);1,15;11,0;standard;;True;True
+OFF-140;office;both;basiskwaliteit;EU-zuid;2024;;2504,7;1547613,0;Normaal (+15%);1,15;10,3;standard;;True;True
+OFF-141;office;FF&E;middensegment;EU-zuid;2025;4509,9;;2342894,0;Zwaar (+30%);1,3;16,2;standard;;True;True
+HOS-142;hospitality;both;middensegment;NL-overig;2021;1657,0;;2002951,0;Zwaar (+30%);1,3;12,9;standard;;True;True
+OFF-143;office;both;basiskwaliteit;NL-overig;2024;2642,3;;2095520,0;Normaal (+15%);1,15;7,1;monument;;True;True
+RET-144;retail;both;middensegment;NL-Randstad;2023;368,7;;263460,0;Geen installatiekosten (0%);1,0;4,7;standard;;False;True
+HOS-145;hospitality;both;middensegment;NL-overig;2023;1730,3;;2063051,0;Normaal (+15%);1,15;9,2;standard;;True;True
+OFF-146;office;both;middensegment;EU-noord;2022;4233,0;;3330224,0;Zwaar (+30%);1,3;10,2;maatwerk;;True;True
+OFF-147;office;FF&E;middensegment;EU-noord;2021;;1350,8;469433,0;Licht (+5%);1,05;4,9;standard;;True;True
+RES-148;residential;both;high-end;NL-overig;2021;280,7;;287361,0;Zwaar (+30%);1,3;9,9;standard;;True;True
+OFF-149;office;FF&E;high-end;NL-overig;2025;2620,7;;1345883,0;Licht (+5%);1,05;6,1;standard;;True;True
+HOS-150;hospitality;FF&E;basiskwaliteit;EU-noord;2022;826,5;;480442,0;Normaal (+15%);1,15;7,2;monument;;True;True
+HOS-151;hospitality;both;basiskwaliteit;EU-zuid;2022;1995,4;1478,1;1524314,0;Ingrijpend (+50%);1,5;9,8;standard;;True;True
+RET-152;retail;FF&E;middensegment;EU-zuid;2022;;404,2;257441,0;Zwaar (+30%);1,3;11,5;maatwerk;;True;True
+RES-153;residential;afbouw;middensegment;NL-Randstad;2025;495,1;;272341,0;Normaal (+15%);1,15;9,7;maatwerk;;True;True
+HOS-154;hospitality;afbouw;basiskwaliteit;NL-overig;2024;;2708,8;1946354,0;Ingrijpend (+50%);1,5;6,4;maatwerk;;True;True
+RET-155;retail;both;high-end;EU-noord;2022;852,7;;1279246,0;Ingrijpend (+50%);1,5;7,9;standard;;True;True
+HOS-156;hospitality;both;basiskwaliteit;EU-zuid;2022;1626,3;;1621114,0;Normaal (+15%);1,15;9,3;maatwerk;;True;True
+OFF-157;office;both;high-end;EU-zuid;2021;;1041,4;772544,0;Licht (+5%);1,05;8,4;maatwerk;;True;True
+RES-158;residential;both;high-end;EU-zuid;2025;380,3;;426609,0;Normaal (+15%);1,15;3,1;standard;;True;True
+RET-159;retail;both;middensegment;NL-overig;2025;;478,4;526504,0;Normaal (+15%);1,15;14,9;standard;;True;True
+OFF-160;office;afbouw;middensegment;NL-Randstad;2024;;6475,0;2982090,0;Geen installatiekosten (0%);1,0;10,9;maatwerk;;False;True
+OFF-161;office;both;basiskwaliteit;NL-overig;2021;;861,3;569080,0;Zwaar (+30%);1,3;9,6;maatwerk;;True;True
+HOS-162;hospitality;afbouw;middensegment;EU-zuid;2022;714,6;;338880,0;Geen installatiekosten (0%);1,0;10,6;maatwerk;;False;True
+RET-163;retail;both;middensegment;NL-Randstad;2023;392,0;290,3;400847,0;Normaal (+15%);1,15;8,1;monument;;True;True
+RET-164;retail;both;middensegment;EU-noord;2023;746,4;;803065,0;Geen installatiekosten (0%);1,0;12,6;maatwerk;;False;True
+RET-165;retail;both;middensegment;EU-zuid;2024;447,3;;441284,0;Licht (+5%);1,05;10,2;standard;;True;True
+RET-166;retail;afbouw;middensegment;NL-Randstad;2024;402,5;;265675,0;Zwaar (+30%);1,3;11,6;standard;;True;True
+OFF-167;office;both;basiskwaliteit;EU-zuid;2025;;695,7;460778,0;Licht (+5%);1,05;7,4;maatwerk;;True;True
+RET-168;retail;FF&E;middensegment;NL-Randstad;2021;324,1;;212441,0;Normaal (+15%);1,15;15,7;maatwerk;;True;True
+HOS-169;hospitality;afbouw;basiskwaliteit;EU-zuid;2021;839,9;;308372,0;Licht (+5%);1,05;8,0;standard;;True;True
+OFF-170;office;FF&E;middensegment;EU-noord;2023;;1423,0;498655,0;Geen installatiekosten (0%);1,0;7,4;standard;;False;True
+RET-171;retail;FF&E;basiskwaliteit;NL-Randstad;2021;;539,1;269985,0;Normaal (+15%);1,15;10,8;maatwerk;;True;True
+RET-172;retail;FF&E;middensegment;NL-overig;2025;530,6;;432615,0;Ingrijpend (+50%);1,5;7,3;standard;;True;True
+OFF-173;office;both;high-end;EU-zuid;2021;1150,1;851,9;1084676,0;Zwaar ingrijpend (+70%);1,7;11,5;maatwerk;;True;True
+OFF-174;office;both;basiskwaliteit;EU-noord;2022;813,8;;750579,0;Ingrijpend (+50%);1,5;12,3;maatwerk;;True;True
+HOS-175;hospitality;both;basiskwaliteit;NL-overig;2022;1584,3;;1226563,0;Geen installatiekosten (0%);1,0;8,0;maatwerk;;False;True
+HOS-176;hospitality;FF&E;basiskwaliteit;EU-noord;2024;423,7;;318563,0;Zwaar (+30%);1,3;4,6;monument;;True;True
+OFF-177;office;both;basiskwaliteit;NL-Randstad;2024;;883,7;633783,0;Normaal (+15%);1,15;10,8;standard;;True;True
+HOS-178;hospitality;FF&E;basiskwaliteit;NL-Randstad;2021;;800,9;357919,0;Normaal (+15%);1,15;5,0;standard;;True;True
+HOS-179;hospitality;both;high-end;EU-noord;2021;1157,5;;1280547,0;Normaal (+15%);1,15;8,0;standard;;True;True
+RET-180;retail;FF&E;basiskwaliteit;NL-overig;2025;1371,8;;728365,0;Licht (+5%);1,05;8,8;monument;;True;True
+RET-181;retail;afbouw;middensegment;NL-Randstad;2021;380,8;;201739,0;Normaal (+15%);1,15;12,5;standard;;True;True
+RES-182;residential;FF&E;basiskwaliteit;EU-noord;2023;224,7;;108346,0;Zwaar (+30%);1,3;14,3;standard;;True;True
+OFF-183;office;FF&E;basiskwaliteit;EU-zuid;2024;;1254,8;482478,0;Normaal (+15%);1,15;11,7;standard;;True;True
+RET-184;retail;FF&E;high-end;EU-zuid;2022;;585,2;421716,0;Normaal (+15%);1,15;8,2;maatwerk;;True;True
+OFF-185;office;both;basiskwaliteit;NL-Randstad;2021;2129,4;;1299742,0;Normaal (+15%);1,15;13,5;standard;;True;True
+HOS-186;hospitality;afbouw;high-end;EU-noord;2022;839,6;;645621,0;Normaal (+15%);1,15;8,8;maatwerk;;True;True
+RET-187;retail;both;basiskwaliteit;EU-zuid;2025;582,6;;530512,0;Licht (+5%);1,05;11,2;standard;;True;True
+RES-188;residential;FF&E;high-end;EU-zuid;2023;;1046,5;745516,0;Zwaar (+30%);1,3;16,2;standard;;True;True
+RET-189;retail;FF&E;middensegment;EU-zuid;2021;587,1;;227257,0;Licht (+5%);1,05;13,6;standard;;True;True
+RES-190;residential;FF&E;basiskwaliteit;NL-Randstad;2022;312,7;;157335,0;Normaal (+15%);1,15;7,0;monument;;True;True
+RET-191;retail;FF&E;basiskwaliteit;EU-zuid;2025;2050,7;;921368,0;Geen installatiekosten (0%);1,0;10,1;standard;;False;True
+RES-192;residential;both;high-end;NL-overig;2023;;1022,8;1046381,0;Normaal (+15%);1,15;9,3;monument;;True;True
+RET-193;retail;FF&E;middensegment;EU-zuid;2025;;882,3;523777,0;Zwaar (+30%);1,3;10,7;standard;;True;True
+RES-194;residential;FF&E;middensegment;NL-Randstad;2025;1054,1;;888906,0;Zwaar ingrijpend (+70%);1,7;13,4;standard;;True;True
+HOS-195;hospitality;FF&E;middensegment;NL-overig;2025;4393,8;;3082863,0;Normaal (+15%);1,15;11,9;standard;;True;True
+HOS-196;hospitality;both;high-end;NL-Randstad;2022;;632,6;829285,0;Normaal (+15%);1,15;10,7;standard;;True;True
+RES-197;residential;both;middensegment;EU-zuid;2021;546,4;;442209,0;Normaal (+15%);1,15;12,5;maatwerk;;True;True
+RES-198;residential;both;basiskwaliteit;NL-overig;2024;;843,5;749072,0;Normaal (+15%);1,15;8,6;monument;;True;True
+RET-199;retail;FF&E;basiskwaliteit;NL-overig;2023;552,3;409,1;182640,0;Licht (+5%);1,05;13,1;standard;;True;True
+RET-200;retail;FF&E;middensegment;EU-zuid;2023;574,5;425,6;239073,0;Normaal (+15%);1,15;7,1;standard;;True;True
