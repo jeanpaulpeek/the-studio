@@ -10,6 +10,12 @@ from pathlib import Path
 import streamlit as st
 import pandas as pd
 import pulp
+from streamlit.errors import StreamlitAPIException
+try:
+    st.set_page_config(page_title="The Studio Suite", page_icon="🎛️", layout="wide", initial_sidebar_state="expanded")
+except StreamlitAPIException:
+    pass
+
 
 # ==== PDF HELPERS (compleet) ====
 from reportlab.lib import colors
