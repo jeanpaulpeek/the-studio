@@ -394,14 +394,10 @@ def _euro0(x):
         return "€ 0"
 
 
-# ---------------- Setup / stijl ----------------
-st.set_page_config(
-    page_title="Value Optimizer — The Studio Suite",
-    layout="wide",
-    initial_sidebar_state="expanded",
-)
+# ========== Setup ==========
 inject_theme()
 render_nav_with_icons()
+
 
 st.markdown(
     """
