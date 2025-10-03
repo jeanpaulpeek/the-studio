@@ -2,6 +2,11 @@ import math
 import streamlit as st
 import pandas as pd
 from typing import Dict, Tuple
+from streamlit.errors import StreamlitAPIException
+try:
+    st.set_page_config(page_title="The Studio Suite", page_icon="🎛️", layout="wide", initial_sidebar_state="expanded")
+except StreamlitAPIException:
+    pass
 
 # (optioneel thema/navigatie – faalt stil als je module niet hebt)
 try:
@@ -37,9 +42,10 @@ def get_solver():
 # later:
 # prob.solve(get_solver())
 
+
 # ========== Setup ==========
-st.set_page_config(page_title="Workspace Optimizer — The Studio Suite", layout="wide", initial_sidebar_state="expanded")
-inject_theme(); render_nav_with_icons()
+inject_theme()
+render_nav_with_icons()
 
 # Grote quote-stijl
 st.markdown("""
