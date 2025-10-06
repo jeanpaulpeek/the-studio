@@ -443,7 +443,7 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.2rem 0; }
 st.markdown(
     """
 <div class="big-quote">
-  "<b><i>Value Optimizer</i></b> bouwt automatisch de beste productmix:
+  "<b><i>Furniture Value Optimizer</i></b> bouwt automatisch de beste productmix:
   óf de hoogste kwaliteit binnen je budget, óf de laagste prijs die aan je
   kwaliteitsdrempel voldoet — helder, snel en onderbouwd."
 </div>
