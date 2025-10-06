@@ -254,12 +254,12 @@ def render_nav_with_icons(active: str | None = None) -> None:
         st.markdown('<div class="nav-zone">', unsafe_allow_html=True)
         if hasattr(st, "page_link"):
             st.page_link(home_target, label="The Studio Suite")
-            st.page_link("pages/1_Value_Optimizer.py", label="Value Optimizer")
+            st.page_link("pages/1_Value_Optimizer.py", label="Furniture Value Optimizer")
             st.page_link("pages/2_Workspace_Optimizer.py", label="Workspace Optimizer")
         else:
             if st.button("The Studio Suite", key="nav_home"):
                 if hasattr(st, "switch_page"): st.switch_page(home_target)
-            if st.button("Value Optimizer", key="nav_quote"):
+            if st.button("Furniture Value Optimizer", key="nav_quote"):
                 if hasattr(st, "switch_page"): st.switch_page("pages/1_Value_Optimizer.py")
             if st.button("Workspace Optimizer", key="nav_m2"):
                 if hasattr(st, "switch_page"): st.switch_page("pages/2_Workspace_Optimizer.py")
