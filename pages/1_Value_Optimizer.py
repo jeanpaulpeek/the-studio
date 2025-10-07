@@ -517,18 +517,38 @@ def _load_demo_df(path: Path) -> pd.DataFrame:
 if source_choice == "Upload eigen prijslijst":
     st.markdown(
         """
-    <div class="callout">
-      <b>Formaat prijslijst (.xlsx)</b><br>
-      • <b>Artikel</b> = artikelnaam<br>
-      • <b>Soort</b> = bijv. sofa, tafel, akoestisch scherm<br>
-      • <b>Merk</b> = bijv. Narbutas, Hay, Vitra<br>
-      • <b>Prijs</b> = adviesprijs exclusief BTW<br>
-      • <b>Klasse</b> = verdeling 1–5<br>
-      • <b>Korting Leverancier</b> = % (optioneel)
-    </div>
-    """,
+        <style>
+          /* Op small screens kolommen onder elkaar */
+          @media (max-width: 800px){
+            .callout.two-col { grid-template-columns: 1fr !important; }
+          }
+        </style>
+        <div class="callout two-col"
+             style="display:grid; grid-template-columns: 1.4fr 1fr; gap:12px; align-items:start;">
+          <div>
+            <b>Formaat prijslijst (.xlsx)</b><br>
+            • <b>Artikel</b> = artikelnaam<br>
+            • <b>Soort</b> = bijv. sofa, tafel, akoestisch scherm<br>
+            • <b>Merk</b> = bijv. Narbutas, Hay, Vitra<br>
+            • <b>Prijs</b> = adviesprijs exclusief BTW<br>
+            • <b>Klasse</b> = verdeling 1–5<br>
+            • <b>Korting Leverancier</b> = % (optioneel)
+          </div>
+          <div>
+            <b>Uitleg klassen (1–5)</b>
+            <ul style="margin:6px 0 0 18px;">
+              <li><b>1</b> – Instap / budget / functioneel</li>
+              <li><b>2</b> – Degelijk / basiscomfort</li>
+              <li><b>3</b> – Comfortabel / merkuitstraling / met oog voor vormgeving</li>
+              <li><b>4</b> – Design / premium-afwerking / high-end</li>
+              <li><b>5</b> – Topsegment / iconisch ontwerp</li>
+            </ul>
+          </div>
+        </div>
+        """,
         unsafe_allow_html=True,
     )
+
     uploaded = st.file_uploader("Upload prijslijst (.xlsx)", type=["xlsx"])
     if not uploaded:
         st.stop()
