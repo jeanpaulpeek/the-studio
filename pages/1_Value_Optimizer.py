@@ -445,7 +445,7 @@ st.markdown(
 <div class="big-quote">
   "<b><i>Furniture Value Optimizer</i></b> bouwt automatisch de beste productmix:
   óf de hoogste kwaliteit binnen je budget, óf de laagste prijs die aan je
-  kwaliteitsdrempel voldoet — helder, snel en onderbouwd."
+  kwaliteitsdrempel voldoet."
 </div>
 <hr class="soft">
 """,
