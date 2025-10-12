@@ -526,13 +526,13 @@ if source_choice == "Upload eigen prijslijst":
         <div class="callout two-col"
              style="display:grid; grid-template-columns: 1.4fr 1fr; gap:12px; align-items:start;">
           <div>
-            <b>Formaat prijslijst (.xlsx)</b><br>
-            • <b>Artikel</b> = artikelnaam<br>
-            • <b>Soort</b> = bijv. sofa, tafel, akoestisch scherm<br>
-            • <b>Merk</b> = bijv. Narbutas, Hay, Vitra<br>
-            • <b>Prijs</b> = adviesprijs exclusief BTW<br>
-            • <b>Klasse</b> = verdeling 1–5<br>
-            • <b>Korting Leverancier</b> = % (optioneel)
+            <b>Formaat prijslijst (.xlsx): gebruik de onderstaande kolomnamen!</b><br>
+            • <b>artikel</b> = artikelnaam<br>
+            • <b>soort</b> = bijv. sofa, tafel, akoestisch scherm<br>
+            • <b>merk</b> = bijv. Narbutas, Hay, Vitra<br>
+            • <b>prijs</b> = adviesprijs exclusief BTW<br>
+            • <b>klasse</b> = verdeling 1–5<br>
+            • <b>korting_Leverancier</b> = % (optioneel)
           </div>
           <div>
             <b>Uitleg klassen (1–5)</b>
