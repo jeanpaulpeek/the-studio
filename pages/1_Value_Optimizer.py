@@ -1007,7 +1007,7 @@ if "gbb_options" in st.session_state and st.session_state["gbb_options"]:
 
     base_price = good["total"]
 
-    def _col_card(title, total, avg, diff_vs_good=None, delta_class=None, delta_ref_label="eis/beste"):
+def _col_card(title, total, avg, diff_vs_good=None, delta_class=None, delta_ref_label="eis/beste"):
     # Prijsverschil versus GOED
     price_html = ""
     if diff_vs_good is not None:
