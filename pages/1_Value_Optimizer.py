@@ -701,6 +701,14 @@ if "gbb_options" in st.session_state and st.session_state["gbb_options"]:
             unsafe_allow_html=True,
         )
 
+    # Bovenaan het RESULTATEN-blok, vóór ref_lbl:
+goal_mode = st.session_state.get("opt_goal", "KLASSE")
+if goal_mode not in ("BUDGET", "KLASSE"):
+    goal_mode = "KLASSE"
+
+ref_lbl = "beste" if goal_mode == "BUDGET" else "eis"
+
+
     goal_mode = st.session_state.get("opt_goal", "KLASSE")  # "BUDGET" of "KLASSE"
     ref_lbl = "beste" if goal_mode == "BUDGET" else "eis"
 
