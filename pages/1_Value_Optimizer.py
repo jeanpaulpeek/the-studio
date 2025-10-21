@@ -570,6 +570,10 @@ st.markdown('<div class="step-label">STAP 2. KIES OPTIMALISATIE-DOEL</div>', uns
 DOEL_KLASSE = "Minimale prijs bij de gekozen kwaliteitsdrempel"
 DOEL_BUDGET = "Maximale kwaliteit binnen budget"
 doel = st.radio(" ", [DOEL_KLASSE, DOEL_BUDGET], index=0, label_visibility="collapsed")
+
+# Bewaar modus voor latere labeling (budget vs kwaliteitsdrempel)
+st.session_state["opt_goal"] = ("BUDGET" if doel == DOEL_BUDGET else "KLASSE")
+
 if doel == DOEL_KLASSE:
     st.caption(
         "Je stelt een kwaliteitsdrempel; de optimizer zoekt de laagste prijs die daaraan voldoet."
@@ -901,26 +905,27 @@ if submitted:
             options = [
                 {
                     "role": "GOOD",
-                    "name": "GOOD • BUDGETVRIENDELIJK (−0,10 KLASSE)",
-                    "result": g_df,
-                    "total": g_total,
-                    "avg": g_avg,
+                    "name": "GOOD • BUDGETVRIENDELIJK (−0,10 t.o.v. beste)",
+                    "result": g_df, "total": g_total, "avg": g_avg,
+                    "delta_class": g_avg - best_avg,   # ≤ 0
+                    "delta_ref": "beste"
                 },
                 {
                     "role": "ALT_A",
-                    "name": "BETTER • ZUINIG (−0,05 KLASSE)",
-                    "result": b_df,
-                    "total": b_total,
-                    "avg": b_avg,
+                    "name": "ALTERNATIEF A • (−0,05 t.o.v. beste)",
+                    "result": b_df, "total": b_total, "avg": b_avg,
+                    "delta_class": b_avg - best_avg,   # ≤ 0
+                    "delta_ref": "beste"
                 },
                 {
                     "role": "ALT_B",
                     "name": "BEST • MAX KWALITEIT BINNEN BUDGET",
-                    "result": best_df,
-                    "total": best_total,
-                    "avg": best_avg,
+                    "result": best_df, "total": best_total, "avg": best_avg,
+                    "delta_class": 0.0,                # referentie
+                    "delta_ref": "beste"
                 },
             ]
+
         else:
             g_df, g_total, g_avg = solve_min_cost_with_quality(
                 df_work,
@@ -949,26 +954,27 @@ if submitted:
             options = [
                 {
                     "role": "GOOD",
-                    "name": "GOOD • MINIMALE PRIJS (VOLD.)",
-                    "result": g_df,
-                    "total": g_total,
-                    "avg": g_avg,
+                    "name": "GOED • MINIMALE PRIJS (voldoet aan eis)",
+                    "result": g_df, "total": g_total, "avg": g_avg,
+                    "delta_class": g_avg - float(target_avg),  # ≈ 0 of ≥ 0
+                    "delta_ref": "eis"
                 },
                 {
                     "role": "ALT_A",
-                    "name": "BETTER • KLASSE +0,05",
-                    "result": b_df,
-                    "total": b_total,
-                    "avg": b_avg,
+                    "name": "ALTERNATIEF A • KLASSE +0,05",
+                    "result": b_df, "total": b_total, "avg": b_avg,
+                    "delta_class": b_avg - float(target_avg),  # ≥ +0.05
+                    "delta_ref": "eis"
                 },
                 {
                     "role": "ALT_B",
-                    "name": "BEST • KLASSE +0,10",
-                    "result": best_df,
-                    "total": best_total,
-                    "avg": best_avg,
+                    "name": "ALTERNATIEF B • KLASSE +0,10",
+                    "result": best_df, "total": best_total, "avg": best_avg,
+                    "delta_class": best_avg - float(target_avg),  # ≥ +0.10
+                    "delta_ref": "eis"
                 },
             ]
+
 
         st.session_state["gbb_options"] = options
         st.session_state["badge"] = (
@@ -1001,53 +1007,67 @@ if "gbb_options" in st.session_state and st.session_state["gbb_options"]:
 
     base_price = good["total"]
 
-    def _col_card(title, subtitle, total, avg, diff_vs_good=None):
-        diff_html = ""
-        if diff_vs_good is not None:
-            sign = "+" if diff_vs_good > 0 else ("±" if abs(diff_vs_good) < 1e-6 else "")
-            diff_html = f'<div class="card-foot">Prijsverschil t.o.v. GOED: {sign}{euro(diff_vs_good,0)}</div>'
+    def _col_card(title, total, avg, diff_vs_good=None, delta_class=None, delta_ref_label="eis/beste"):
+    # Prijsverschil versus GOED
+    price_html = ""
+    if diff_vs_good is not None:
+        sign = "+" if diff_vs_good > 0 else ("±" if abs(diff_vs_good) < 1e-6 else "")
+        price_html = f'<div class="card-foot">Prijsverschil t.o.v. GOED: {sign}{euro(diff_vs_good,0)}</div>'
 
-        st.markdown(
-            f"""
-    <div class="card">
-      <h4>{title}</h4>
-      <div>{subtitle}</div>
-      <div><b>Prijs = {euro(total, 0)}</b></div>
-      <div><b>Gemiddelde klasse = {str(round(avg,2)).replace('.', ',')}</b></div>
-      {diff_html}
-    </div>
-    """,
-            unsafe_allow_html=True,
+    # Δ kwaliteit t.o.v. referentie (eis of beste)
+    delta_html = ""
+    if delta_class is not None:
+        delta_html = f'<div>Δ kwaliteit t.o.v. <b>{delta_ref_label}</b>: {delta_class:+.2f}</div>'.replace(".", ",")
+
+    st.markdown(
+        f"""
+<div class="card">
+  <h4>{title}</h4>
+  <div><b>Prijs = {euro(total, 0)}</b></div>
+  <div><b>Gemiddelde klasse = {str(round(avg,2)).replace('.', ',')}</b></div>
+  {delta_html}
+  {price_html}
+</div>
+""",
+        unsafe_allow_html=True,
+    )
+
+
+    goal_mode = st.session_state.get("opt_goal", "KLASSE")  # "BUDGET" of "KLASSE"
+ref_lbl = "beste" if goal_mode == "BUDGET" else "eis"
+
+with c1:
+    _col_card(
+        "GOED — MINIMALE PRIJS" if goal_mode == "KLASSE" else "GOED — BUDGETVRIENDELIJK",
+        good["total"], good["avg"],
+        diff_vs_good=None,
+        delta_class=good.get("delta_class"),
+        delta_ref_label=ref_lbl
+    )
+
+with c2:
+    if altA:
+        _col_card(
+            "ALTERNATIEF A",
+            altA["total"], altA["avg"],
+            diff_vs_good=altA["total"] - base_price,
+            delta_class=altA.get("delta_class"),
+            delta_ref_label=ref_lbl
         )
+    else:
+        st.info("Geen alternatief A beschikbaar voor deze invoer.")
 
-    c1, c2, c3 = st.columns(3)
-
-    with c1:
-        _col_card("GOED – MINIMALE PRIJS", "Voldoet aan kwaliteitsdoel.", good["total"], good["avg"])
-
-    with c2:
-        if altA:
-            _col_card(
-                "ALTERNATIEF A",
-                "Voldoet aan kwaliteitsdoel.",
-                altA["total"],
-                altA["avg"],
-                altA["total"] - base_price,
-            )
-        else:
-            st.info("Geen alternatief A beschikbaar voor deze invoer.")
-
-    with c3:
-        if altB:
-            _col_card(
-                "ALTERNATIEF B",
-                "Voldoet aan kwaliteitsdoel.",
-                altB["total"],
-                altB["avg"],
-                altB["total"] - base_price,
-            )
-        else:
-            st.info("Geen alternatief B beschikbaar voor deze invoer.")
+with c3:
+    if altB:
+        _col_card(
+            "ALTERNATIEF B" if goal_mode == "KLASSE" else "BEST — MAX KWALITEIT BINNEN BUDGET",
+            altB["total"], altB["avg"],
+            diff_vs_good=altB["total"] - base_price,
+            delta_class=altB.get("delta_class"),
+            delta_ref_label=ref_lbl
+        )
+    else:
+        st.info("Geen alternatief B beschikbaar voor deze invoer.")
 
     st.markdown('<hr class="soft">', unsafe_allow_html=True)
 
