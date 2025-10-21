@@ -869,6 +869,7 @@ if submitted:
     options = []
     try:
         if doel == DOEL_BUDGET:
+            # --- BUDGETMODUS: eerst BESTE kwaliteit binnen budget ---
             best_df, best_total, best_avg = solve_max_quality_under_budget(
                 df_work,
                 needs,
@@ -877,50 +878,53 @@ if submitted:
                 max_class_by_type=per_type_max,
                 no_mix_by_type=no_mix_by_type,
             )
-            # good/better via stapjes onder BEST
-            thr_better = max(1.0, best_avg - 0.05)
-            thr_good = max(1.0, best_avg - 0.10)
+            # Alternatieven: stapjes ónder BEST
+            thr_a = max(1.0, best_avg - 0.05)  # Alt A
+            thr_b = max(1.0, best_avg - 0.10)  # Alt B
+
+            a_df, a_total, a_avg = solve_min_cost_with_quality(
+                df_work,
+                needs,
+                thr_a,
+                min_class_by_type=per_type_min,
+                max_class_by_type=per_type_max,
+                no_mix_by_type=no_mix_by_type,
+                budget_cap=budget_net,
+            )
             b_df, b_total, b_avg = solve_min_cost_with_quality(
                 df_work,
                 needs,
-                thr_better,
+                thr_b,
                 min_class_by_type=per_type_min,
                 max_class_by_type=per_type_max,
                 no_mix_by_type=no_mix_by_type,
                 budget_cap=budget_net,
             )
-            g_df, g_total, g_avg = solve_min_cost_with_quality(
-                df_work,
-                needs,
-                thr_good,
-                min_class_by_type=per_type_min,
-                max_class_by_type=per_type_max,
-                no_mix_by_type=no_mix_by_type,
-                budget_cap=budget_net,
-            )
+            # BELANGRIJK: GOED = BEST, A = −0,05, B = −0,10
             options = [
                 {
                     "role": "GOOD",
-                    "name": "GOOD • BUDGETVRIENDELIJK (−0,10 KLASSE)",
-                    "result": g_df,
-                    "total": g_total,
-                    "avg": g_avg,
-                },
-                {
-                    "role": "ALT_A",
-                    "name": "BETTER • ZUINIG (−0,05 KLASSE)",
-                    "result": b_df,
-                    "total": b_total,
-                    "avg": b_avg,
-                },
-                {
-                    "role": "ALT_B",
-                    "name": "BEST • MAX KWALITEIT BINNEN BUDGET",
+                    "name": "GOOD • MAX KWALITEIT BINNEN BUDGET",
                     "result": best_df,
                     "total": best_total,
                     "avg": best_avg,
                 },
+                {
+                    "role": "ALT_A",
+                    "name": "ALTERNATIEF A • −0,05 KLASSE",
+                    "result": a_df,
+                    "total": a_total,
+                    "avg": a_avg,
+                },
+                {
+                    "role": "ALT_B",
+                    "name": "ALTERNATIEF B • −0,10 KLASSE",
+                    "result": b_df,
+                    "total": b_total,
+                    "avg": b_avg,
+                },
             ]
+            st.session_state["goal_mode"] = "BUDGET"
         else:
             g_df, g_total, g_avg = solve_min_cost_with_quality(
                 df_work,
@@ -969,6 +973,7 @@ if submitted:
                     "avg": best_avg,
                 },
             ]
+            st.session_state["goal_mode"] = "KLASSE"
 
         st.session_state["gbb_options"] = options
         st.session_state["badge"] = (
@@ -1001,6 +1006,10 @@ if "gbb_options" in st.session_state and st.session_state["gbb_options"]:
 
     base_price = good["total"]
 
+    # Kaarttitels contextueel zodat het niet verwart
+    goal_mode = st.session_state.get("goal_mode", "KLASSE")
+    good_title = "GOED – MAX KWALITEIT BINNEN BUDGET" if goal_mode == "BUDGET" else "GOED – MINIMALE PRIJS"
+
     def _col_card(title, subtitle, total, avg, diff_vs_good=None):
         diff_html = ""
         if diff_vs_good is not None:
@@ -1023,13 +1032,13 @@ if "gbb_options" in st.session_state and st.session_state["gbb_options"]:
     c1, c2, c3 = st.columns(3)
 
     with c1:
-        _col_card("GOED – MINIMALE PRIJS", "Voldoet aan kwaliteitsdoel.", good["total"], good["avg"])
+        _col_card(good_title, "Voldoet aan doelstelling.", good["total"], good["avg"])
 
     with c2:
         if altA:
             _col_card(
                 "ALTERNATIEF A",
-                "Voldoet aan kwaliteitsdoel.",
+                "Voldoet aan doelstelling.",
                 altA["total"],
                 altA["avg"],
                 altA["total"] - base_price,
@@ -1041,7 +1050,7 @@ if "gbb_options" in st.session_state and st.session_state["gbb_options"]:
         if altB:
             _col_card(
                 "ALTERNATIEF B",
-                "Voldoet aan kwaliteitsdoel.",
+                "Voldoet aan doelstelling.",
                 altB["total"],
                 altB["avg"],
                 altB["total"] - base_price,
@@ -1089,11 +1098,12 @@ opts = st.session_state.get("gbb_options")
 if not opts:
     st.info("Nog geen resultaten om te tonen. Klik eerst op **Optimaliseren**.")
 else:
-    # --- Labels consistent met je kaarten ---
+    # --- Labels voor selectbox contextueel, verder geen logica aangepast ---
+    goal_mode = st.session_state.get("goal_mode", "KLASSE")
     labels = []
     for i, o in enumerate(opts):
         if i == 0:
-            labels.append("GOED — MINIMALE PRIJS")
+            labels.append("GOED — MAX KWALITEIT BINNEN BUDGET" if goal_mode == "BUDGET" else "GOED — MINIMALE PRIJS")
         elif i == 1:
             labels.append("ALTERNATIEF A")
         elif i == 2:
@@ -1147,7 +1157,7 @@ else:
         hide_index=True,
     )
 
-    # --- METRICS: leiden nu ook de rest van de app ---
+    # --- METRICS ---
     total_omzet = float(show["Subtotaal (klant)"].sum()) if not show.empty else 0.0
     total_inkoop = float(sel_df["inkoop_subtotaal"].sum()) if not sel_df.empty else 0.0
     marge_eur = total_omzet - total_inkoop
@@ -1345,6 +1355,7 @@ def _soft_reset():
         "pdf_variant_radio",
         "pdf_firstpage",
         "pdf_letterhead",
+        "goal_mode",
     ]:
         st.session_state.pop(k, None)
     st.rerun()
